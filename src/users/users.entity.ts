@@ -19,6 +19,7 @@ export class UserEntity extends CommonEntity {
   username: string;
 
   @Exclude()
+  @IsNotEmpty({ message: '비밀번호를 작성해주세요.' })
   @Column({ type: 'varchar', nullable: false })
   password: string;
 
